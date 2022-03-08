@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kollazs</title>
-<style>
-    body {background-color: gray;
-    }
-
-    h1 {color: lightblue;
-    }
-
-    h2 {color: lightblue; 
-        text-align:justify;
-    }
-</style>    
+    <title>pita</title>
 </head>
 <body>
-    <h1 style="text-align:center;"> jakab balázs vagyok.</h1>
-    <h2 style="text-align: center;"> Jakab Balázs vagyok a Miskolci SZC Kandó Kálmán középiskolába járok.</h2>
-    <img src="img/kollazs.png" alt="itt lenne a kollazsom." title="kollázs" width="500">
-    <h2><----- Itt látható a kollázs képem.</h2>
+    <fieldset style="width: fit-content; background-color: aqua;  border-radius: 15px;">
+        <legend style="border: 2px solid black; background-color: aqua; border-radius: 15px;">Pitagorasz</legend>
+    <img src="Pitagorasz_3.jpg" style="width: 200px;"><br>
+    <input type="number" placeholder="a" id="pitaa" style="background-color:deepskyblue ;">
+    <input type="number" placeholder="b" id="pitab" style="background-color: deepskyblue;">
+    <button onclick="pita(pitaa.value,pitab.value)" style="background-color: deepskyblue;"> SZÁMÍT</button>
+    <p>eredmeny</p>
+    <p><span id="C"></span></p>
+    <script>
+        function pita(a,b){
+            var C = 0
+            document.getElementById("C").innerHTML=Math.sqrt(a*a+b*b)
+        }
+    </script>
+    </fieldset>
 </body>
-</html> 
+</html>
